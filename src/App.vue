@@ -7,8 +7,10 @@
       <li> <a href="#" target="_blank"> Contactos </a> </li>
     </ul>
 
-    <!-- Cargar componentes -->
-    <home>  </home>
+    <!-- Cargar componentes
+    <home>  </home>  -->
+
+    <router-view> </router-view>
 
   </div>
 </template>
