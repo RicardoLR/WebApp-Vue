@@ -21,7 +21,7 @@
 import axios from 'axios';
 
 export default {
-  name: 'restaurante-list',
+  name: 'restaurantes',
   mounted(){
     this.getRestaurantes();
   },
@@ -36,7 +36,6 @@ export default {
     getRestaurantes(){
       axios.get('http://localhost:80/slim/restaurantes-api.php/restaurantes')
         .then( (res)=>{
-          console.log(res)
           this.restaurantes = res.data.data
         })
     }
