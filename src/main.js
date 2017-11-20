@@ -9,6 +9,7 @@ import App from './App.vue'
 import Home from './Home.vue'
 import Contacto from './Contacto.vue'
 import Restaurante from './Restaurante.vue'
+import RestauranteAdd from './RestauranteAdd.vue'
 import RestauranteTop from './RestauranteTop.vue'
 import RestauranteList from './RestauranteList.vue'
 
@@ -24,6 +25,7 @@ const routes = [
   {path: '/restaurantes-destacados/:id', component: RestauranteTop, name:'restaurantes-destacados' },
   {path: '/editar-restaurantes/:id', component: RestauranteTop, name:'editar-restaurantes' },
 
+  {path: '/crear-restaurante', component: RestauranteAdd, name:'crear-restaurante' },
   {path: '/restaurante/:id', component: Restaurante, name:'restaurante' },
   {path: '/restaurantes', component: RestauranteList }
 ];
@@ -39,6 +41,7 @@ Vue.component('contacto', Contacto)
 Vue.component('restaurante-top', RestauranteTop)
 
 Vue.component('restaurante', Restaurante)
+Vue.component('crear-restaurante', RestauranteAdd)
 Vue.component('restaurantes', RestauranteList)
 
 new Vue({
