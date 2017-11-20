@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <ul>
-      <li> <a href="#" target="_blank"> Home </a> </li>
-      <li> <a href="#" target="_blank"> Restaurantes </a> </li>
-      <li> <a href="#" target="_blank"> Restaurantes Destacados </a> </li>
-      <li> <a href="#" target="_blank"> Contactos </a> </li>
+      <li> <router-link to="/home">Home</router-link> </li>
+      <li> <router-link to="/restaurantes">Restaurantes</router-link> </li>
+      <li> <router-link :to="{ name:'restaurantes-destacados', params:{id:16} }">Restaurantes Destacados</router-link> </li>
+      <li> <router-link to="/contacto">Contactos</router-link> </li>
     </ul>
 
     <!-- Cargar componentes
