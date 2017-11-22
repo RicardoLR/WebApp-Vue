@@ -5,13 +5,14 @@ import Axios from 'axios'
 
 import App from './App.vue'
 
-/** Solo al importar el componente ya podemos usarlo    */
-import Home from './Home.vue'
-import Contacto from './Contacto.vue'
-import Restaurante from './Restaurante.vue'
-import RestauranteAdd from './RestauranteAdd.vue'
-import RestauranteTop from './RestauranteTop.vue'
-import RestauranteList from './RestauranteList.vue'
+/** Solo al importar el componente ya podemos usarlo en Containers */
+import Home from './components/containers/Home.vue'
+import Contacto from './components/containers/Contacto.vue'
+import Restaurante from './components/containers/Restaurante.vue'
+import RestauranteAdd from './components/containers/RestauranteAdd.vue'
+import RestauranteEdit from './components/containers/RestauranteEdit.vue'
+import RestauranteTop from './components/containers/RestauranteTop.vue'
+import RestauranteList from './components/containers/RestauranteList.vue'
 
 
 /**  Configuracion de Rutas */
@@ -23,7 +24,7 @@ const routes = [
   {path: '/contacto', component: Contacto },
 
   {path: '/restaurantes-destacados/:id', component: RestauranteTop, name:'restaurantes-destacados' },
-  {path: '/editar-restaurantes/:id', component: RestauranteTop, name:'editar-restaurantes' },
+  {path: '/editar-restaurante/:id', component: RestauranteEdit, name:'editar-restaurante' },
 
   {path: '/crear-restaurante', component: RestauranteAdd, name:'crear-restaurante' },
   {path: '/restaurante/:id', component: Restaurante, name:'restaurante' },
@@ -43,6 +44,8 @@ Vue.component('restaurante-top', RestauranteTop)
 Vue.component('restaurante', Restaurante)
 Vue.component('crear-restaurante', RestauranteAdd)
 Vue.component('restaurantes', RestauranteList)
+
+
 
 new Vue({
   el: '#app',

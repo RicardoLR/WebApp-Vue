@@ -2,7 +2,7 @@
     <div>
       <ul id="restaurantes-list" v-if="restaurantes != null ">
         <li v-for="restaurante in restaurantes">  
-          <strong> {{restaurante.nombre}} </strong>
+          <strong> {{restaurante.nombre}} {{restaurante.id}}</strong>
           <p>
             <router-link :to="{name:'restaurante', params:{id:restaurante.id} }">
               ver

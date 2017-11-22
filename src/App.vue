@@ -8,9 +8,7 @@
       <li> <router-link to="/contacto">Contactos</router-link> </li>
     </ul>
     <hr />
-
-    <!-- Cargar componentes
-    <home>  </home>  -->
+    
 
     <router-view> </router-view>
 
